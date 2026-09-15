@@ -88,16 +88,15 @@ const organizationJsonLd = {
         "https://www.linkedin.com/company/enrilo-technologies",
       ],
       foundingDate: "2026",
-      // TODO: replace with Aunsh and Shoaib's real LinkedIn URLs.
       founder: [
         {
           "@type": "Person",
-          name: "Aunsh",
+          name: "Aunsh Patel",
           sameAs: ["https://www.linkedin.com/in/aunsh-patel/"],
         },
         {
           "@type": "Person",
-          name: "Shoaib",
+          name: "Shoaib Shaikh",
           sameAs: ["https://www.linkedin.com/in/shoaib98/"],
         },
       ],

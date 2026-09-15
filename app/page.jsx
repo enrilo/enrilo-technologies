@@ -439,12 +439,12 @@ export default function Home() {
               </p>
               <p className="mb-1.5 text-[1.09rem] text-slate">
                 <a href="https://www.linkedin.com/in/aunsh-patel/" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
-                  Aunsh on LinkedIn
+                  Aunsh Patel on LinkedIn
                 </a>
               </p>
               <p className="mb-1.5 text-[1.09rem] text-slate">
                 <a href="https://www.linkedin.com/in/shoaib98/" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
-                  Shoaib on LinkedIn
+                  Shoaib Shaikh on LinkedIn
                 </a>
               </p>
             </div>
