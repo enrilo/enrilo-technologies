@@ -1,6 +1,9 @@
 import Link from "next/link";
 import CookiePreferencesButton from "@/components/CookiePreferencesButton";
 
+// TODO: replace with the real company LinkedIn URL.
+const COMPANY_LINKEDIN_URL = "https://www.linkedin.com/company/enrilo-technologies";
+
 export default function Footer() {
   return (
     <footer className="rounded-t-3xl bg-ink text-paper">
@@ -22,6 +25,11 @@ export default function Footer() {
             <Link href="/terms" className="text-paper no-underline hover:text-brass">
               Terms of Service
             </Link>
+          </li>
+          <li>
+            <a href={COMPANY_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-paper no-underline hover:text-brass">
+              LinkedIn
+            </a>
           </li>
           <li>
             <CookiePreferencesButton />

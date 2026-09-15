@@ -83,7 +83,24 @@ const organizationJsonLd = {
       name: "Enrilo Technologies",
       url: siteUrl,
       email: "contactus@enrilotechnologies.com",
+      // TODO: replace with the real LinkedIn URL.
+      sameAs: [
+        "https://www.linkedin.com/company/enrilo-technologies",
+      ],
       foundingDate: "2026",
+      // TODO: replace with Aunsh and Shoaib's real LinkedIn URLs.
+      founder: [
+        {
+          "@type": "Person",
+          name: "Aunsh",
+          sameAs: ["https://www.linkedin.com/in/aunsh-patel/"],
+        },
+        {
+          "@type": "Person",
+          name: "Shoaib",
+          sameAs: ["https://www.linkedin.com/in/shoaib98/"],
+        },
+      ],
       description: "Enrilo Technologies is a software company building its own products and custom web and mobile applications.",
       areaServed: [
         { "@type": "Country", name: "India" },

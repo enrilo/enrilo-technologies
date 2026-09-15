@@ -429,6 +429,24 @@ export default function Home() {
                 Based in
               </h4>
               <p className="mb-1.5 text-[1.09rem] text-slate">India</p>
+              <h4 className="mb-3 mt-6 font-serif font-semibold text-[1.13rem] text-ink">
+                Connect With Us
+              </h4>
+              <p className="mb-1.5 text-[1.09rem] text-slate">
+                <a href="https://www.linkedin.com/company/enrilo-technologies" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
+                  Enrilo Technologies on LinkedIn
+                </a>
+              </p>
+              <p className="mb-1.5 text-[1.09rem] text-slate">
+                <a href="https://www.linkedin.com/in/aunsh-patel/" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
+                  Aunsh on LinkedIn
+                </a>
+              </p>
+              <p className="mb-1.5 text-[1.09rem] text-slate">
+                <a href="https://www.linkedin.com/in/shoaib98/" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
+                  Shoaib on LinkedIn
+                </a>
+              </p>
             </div>
           </div>
         </div>
