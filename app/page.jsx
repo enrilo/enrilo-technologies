@@ -38,16 +38,17 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-shell grid-cols-1 items-center gap-10 px-5 py-14 sm:px-8 sm:py-16 md:grid-cols-[1.1fr_0.9fr] md:gap-14 md:py-24">
           <div>
             <h1 className="max-w-[16ch] text-[clamp(2.3rem,4.6vw,3.6rem)]">
-              We build software the way a craftsperson builds a tool.
+              Software built with the same care a craftsperson gives a tool.
             </h1>
             <span className="mt-5 inline-flex w-fit font-semibold items-center rounded-full border border-paper/20 bg-paper/5 px-4 py-1.5 text-[1.1rem] tracking-wide text-paper">
               Based in India, building for the world
             </span>
             <p className="mt-5 max-w-[48ch] text-[1.18rem] text-paper/80">
-              We build our own software products and custom web and
-              mobile applications for businesses whose workflows do not
-              fit off-the-shelf tools. AcadTracker, our CRM for education
-              consultancies, is where we started — not where we stop.
+              We build our own software products alongside custom web and
+              mobile applications for businesses whose day-to-day work does
+              not fit neatly into off-the-shelf tools. AcadTracker, our CRM
+              for education consultancies, is where our story began — it is
+              not where it ends.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <a href="#services" className="inline-flex items-center gap-2 rounded-full bg-brass px-6 py-3.5 text-[1.09rem] font-semibold text-ink no-underline shadow-lg shadow-brass/20 transition-colors hover:bg-[#c79549]">
@@ -92,8 +93,8 @@ export default function Home() {
           <div className="mb-14 flex flex-col gap-4">
             <Eyebrow>About Us</Eyebrow>
             <h2 className="max-w-[26ch] text-[clamp(1.85rem,3.2vw,2.55rem)] text-ink">
-              A small, self-funded team building our own product and
-              custom software for clients.
+              A small, self-funded team building one product of our own
+              and custom software for clients.
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-[200px_1fr]">
@@ -122,18 +123,19 @@ export default function Home() {
             <div>
               <p className="max-w-[58ch] text-[1.18rem] text-ink2">
                 We started by building AcadTracker for study-abroad and
-                college-placement consultancies running their business on
-                spreadsheets and tools never built for how they work.
-                Fitting the software to the business, not the other way
-                around, is still how we work today — whether what we're
-                building is our own product or something custom for you.
+                college-placement consultancies who were running their
+                business on spreadsheets and tools that were never built
+                for how they actually work. Shaping the software around the
+                business, rather than forcing the business to adapt, is
+                still how we approach every project — whether it is our own
+                product or something custom for you.
               </p>
               <p className="mt-4 max-w-[58ch] text-[1.18rem] text-ink2">
-                We are self-funded, so we choose the projects we can do
-                justice to instead of taking on more than one team can
-                handle well. That is what lets the same people stay with
-                you from the first conversation through years of support
-                afterward.
+                Being self-funded means we pick projects we can genuinely do
+                justice to, rather than stretching one team across more than
+                it can handle well. That discipline is why the same people
+                who scope your project are still the ones supporting it
+                years later.
               </p>
               <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl border border-ink/10 bg-white p-5 shadow-sm">
@@ -141,8 +143,8 @@ export default function Home() {
                     Built around your work
                   </dt>
                   <dd className="mt-1.5 text-[1.06rem] text-slate">
-                    Software shaped to your process, not a template you
-                    have to adapt to.
+                    Software shaped to how your team already operates, not
+                    a template you're expected to adapt to.
                   </dd>
                 </div>
                 <div className="rounded-2xl border border-ink/10 bg-white p-5 shadow-sm">
@@ -150,14 +152,15 @@ export default function Home() {
                     One team, start to finish
                   </dt>
                   <dd className="mt-1.5 text-[1.06rem] text-slate">
-                    You work directly with the people writing the code —
-                    no account manager relaying messages in between.
+                    You speak directly with the people writing the code,
+                    with no account manager relaying messages in between.
                   </dd>
                 </div>
                 <div className="rounded-2xl border border-ink/10 bg-white p-5 shadow-sm">
                   <dt className="font-serif font-semibold text-[1.12rem] text-ink">Built to last</dt>
                   <dd className="mt-1.5 text-[1.06rem] text-slate">
-                    We think in years of upkeep, not a quick exit.
+                    We plan for years of upkeep, not a quick handoff and
+                    an exit.
                   </dd>
                 </div>
               </div>
@@ -172,8 +175,8 @@ export default function Home() {
           <div className="mb-14 flex flex-col gap-4">
             <Eyebrow>What We Do</Eyebrow>
             <h2 className="max-w-[26ch] text-[clamp(1.85rem,3.2vw,2.55rem)] text-ink">
-              Software products, web development, mobile development, and
-              support.
+              Products, web builds, mobile apps, and the support that
+              follows.
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-6">
@@ -185,13 +188,13 @@ export default function Home() {
                   Software Products
                 </h3>
                 <p className="mt-3 max-w-[68ch] text-[1.13rem] text-ink2">
-                  We build products we run ourselves, so we feel every
-                  rough edge before a client would. AcadTracker is the
-                  first — a CRM for study-abroad and domestic education
-                  consultancies, covering everything from first enquiry
-                  to a confirmed admission. It is not a side project; it
-                  is a business we operate, which means every feature
-                  earns its place before it ships.
+                  We build and run our own products, so we hit every
+                  rough edge ourselves long before a client ever would.
+                  AcadTracker is the first — a CRM for study-abroad and
+                  domestic education consultancies that covers everything
+                  from the first enquiry to a confirmed admission. It is
+                  a business we operate day to day, not a side project,
+                  so every feature has to earn its place before it ships.
                 </p>
                 <ul className="m-0 mt-4 grid grid-cols-1 gap-x-8 gap-y-2 list-disc pl-5 text-[1.08rem] text-ink2 sm:grid-cols-2">
                   <li>Lead and applicant tracking, end to end</li>
@@ -212,12 +215,12 @@ export default function Home() {
                   Web Development
                 </h3>
                 <p className="mt-3 max-w-[68ch] text-[1.13rem] text-ink2">
-                  When off-the-shelf tools do not fit, we design and
-                  build the web application your business actually runs
-                  on. We work in the MERN stack and Next.js, backed by
+                  When off-the-shelf tools fall short, we design and build
+                  the web application your business actually runs on. We
+                  work in the MERN stack and Next.js, backed by
                   PostgreSQL, so what you get loads fast, holds up under
-                  real traffic, and is straightforward for another
-                  engineer to pick up later.
+                  real traffic, and is easy for another engineer to pick
+                  up down the line.
                 </p>
                 <ul className="m-0 mt-4 grid grid-cols-1 gap-x-8 gap-y-2 list-disc pl-5 text-[1.08rem] text-ink2 sm:grid-cols-2">
                   <li>Customer and client portals</li>
@@ -239,10 +242,10 @@ export default function Home() {
                 </h3>
                 <p className="mt-3 max-w-[68ch] text-[1.13rem] text-ink2">
                   For teams and customers who need it in their pocket, we
-                  build Android and iOS apps that feel native rather than
-                  a web page wrapped in an app shell — for field teams
-                  working outside the office, and for customer-facing
-                  apps people come back to every day.
+                  build Android and iOS apps that feel genuinely native
+                  rather than a website wrapped in an app shell — for
+                  field teams working away from a desk, and for
+                  customer-facing apps people open every day.
                 </p>
                 <ul className="m-0 mt-4 grid grid-cols-1 gap-x-8 gap-y-2 list-disc pl-5 text-[1.08rem] text-ink2 sm:grid-cols-2">
                   <li>Field and operations apps</li>
@@ -260,12 +263,12 @@ export default function Home() {
                   Support &amp; Maintenance
                 </h3>
                 <p className="mt-3 max-w-[68ch] text-[1.13rem] text-ink2">
-                  Launch is the start of the relationship, not the end of
-                  it. We maintain and improve what we build — fixing
-                  issues, shipping small improvements, and making changes
+                  Launch is where the relationship starts, not where it
+                  ends. We keep maintaining and improving what we build —
+                  fixing issues, shipping small improvements, and adjusting
                   as your business changes — with a direct line to the
-                  person who actually knows your project, not a ticket
-                  queue.
+                  person who actually knows your project, instead of a
+                  ticket queue.
                 </p>
                 <ul className="m-0 mt-4 grid grid-cols-1 gap-x-8 gap-y-2 list-disc pl-5 text-[1.08rem] text-ink2 sm:grid-cols-2">
                   <li>Bug fixes and uptime monitoring</li>
@@ -284,7 +287,7 @@ export default function Home() {
           <div className="mb-14 flex flex-col gap-4">
             <Eyebrow>How We Work</Eyebrow>
             <h2 className="max-w-[22ch] text-[clamp(1.85rem,3.2vw,2.55rem)] text-ink">
-              Four steps from first call to running day-to-day.
+              Four steps from the first call to daily use.
             </h2>
           </div>
           <div>
@@ -293,22 +296,22 @@ export default function Home() {
                 {
                   n: "01",
                   t: "Understand the work",
-                  d: "We sit with your team and map how work actually moves today — the steps, the people, and where time gets lost.",
+                  d: "We sit down with your team and map how work actually moves today — the steps, the people involved, and where time gets lost along the way.",
                 },
                 {
                   n: "02",
                   t: "Design the fit",
-                  d: "Whether it is configuring AcadTracker or scoping a custom build, we shape the software around your process, roles, and stages.",
+                  d: "Whether it's configuring AcadTracker or scoping a custom build, we shape the software around your existing process, roles, and stages.",
                 },
                 {
                   n: "03",
                   t: "Build, migrate, and train",
-                  d: "We build in short cycles, migrate your existing data, and train every team on the workflow they will use each day.",
+                  d: "We build in short cycles, migrate your existing data across, and train every team on the workflow they'll rely on day to day.",
                 },
                 {
                   n: "04",
                   t: "Support for the long run",
-                  d: "Ongoing maintenance, improvements, and a direct line to the people who built it — not a ticket lottery.",
+                  d: "Ongoing maintenance and improvements, with a direct line to the people who actually built it — never a ticket lottery.",
                 },
               ].map((s) => (
                 <li key={s.n} className="grid grid-cols-[3rem_1fr] gap-5 rounded-2xl border border-ink/10 bg-white p-5 shadow-sm sm:p-6">
@@ -336,7 +339,7 @@ export default function Home() {
           <div className="mb-14 flex flex-col gap-4">
             <Eyebrow>Our Product</Eyebrow>
             <h2 className="max-w-[22ch] text-[clamp(1.85rem,3.2vw,2.55rem)] text-ink">
-              AcadTracker — the CRM for education consultancies.
+              AcadTracker, a CRM built for education consultancies.
             </h2>
           </div>
           <div>
@@ -356,9 +359,10 @@ export default function Home() {
                 </div>
                 <p className="mb-2 max-w-[62ch] text-[1.12rem] text-slate">
                   AcadTracker brings enquiries, applications, documents,
-                  and payments into one place — built for study-abroad
-                  consultancies and domestic college-placement
-                  consultancies running multiple branches.
+                  and payments together in one place, built for
+                  study-abroad consultancies and domestic
+                  college-placement consultancies running across
+                  multiple branches.
                 </p>
                 <p className="mb-7 text-[1.12rem] text-slate">
                   Learn more at{" "}
@@ -408,7 +412,7 @@ export default function Home() {
           <div className="mb-14 flex flex-col gap-4">
             <Eyebrow>Contact Us</Eyebrow>
             <h2 className="max-w-[22ch] text-[clamp(1.85rem,3.2vw,2.55rem)] text-ink">
-              Talk to us about AcadTracker or a project of your own.
+              Let's talk about AcadTracker or a project of your own.
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_320px]">

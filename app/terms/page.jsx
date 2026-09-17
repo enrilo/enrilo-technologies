@@ -17,11 +17,11 @@ export default function TermsPage() {
 
       <div className="rounded-3xl border border-ink/10 bg-white p-6 shadow-sm sm:p-10">
       <p className="text-[1.08rem] text-ink2">
-        These Terms of Service (&quot;Terms&quot;) govern your access to and use
-        of this website, enrilotechnologies.com, operated by Enrilo Technologies
-        (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;). By using this
-        website, you agree to these Terms. If you do not agree, please do not
-        use the site.
+        These Terms of Service (&quot;Terms&quot;) govern your access to and
+        use of this website, enrilotechnologies.com, operated by Enrilo
+        Technologies (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;). By
+        using this website, you agree to be bound by these Terms. If you do
+        not agree, please do not use the site.
       </p>
 
       <h2 className="mb-3 mt-10 font-sans text-[1.4rem] font-semibold">

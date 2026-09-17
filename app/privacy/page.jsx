@@ -19,8 +19,9 @@ export default function PrivacyPage() {
       <p className="text-[1.08rem] text-ink2">
         This Privacy Policy explains how Enrilo Technologies (&quot;we&quot;,
         &quot;us&quot;, &quot;our&quot;) collects, uses, shares, and protects
-        information when you visit this website, enrilotechnologies.com. It also
-        describes the choices you have and how to exercise your rights.
+        information when you visit this website, enrilotechnologies.com. It
+        also sets out the choices available to you and how you can exercise
+        your rights.
       </p>
       <p className="mt-4 text-[1.08rem] text-ink2">
         Our product, AcadTracker, has its own Privacy Policy published on the
@@ -152,8 +153,8 @@ export default function PrivacyPage() {
       <p className="text-[1.08rem] text-ink2">
         We use technical and organisational measures appropriate to the risk,
         including encryption in transit, access controls, and least-privilege
-        practices. No method of transmission or storage is completely secure,
-        so we cannot guarantee absolute security.
+        practices. That said, no method of transmission or storage is ever
+        completely secure, so we cannot guarantee absolute security.
       </p>
 
       <h2 className="mb-3 mt-10 font-sans text-[1.4rem] font-semibold">

@@ -58,8 +58,8 @@ export default function ContactForm() {
       <div>
         <h3 className="font-serif text-[1.22rem] text-ink">Thank you</h3>
         <p className="mt-2 max-w-[52ch] text-[1.1rem] text-ink2">
-          We&apos;ve received your message. The Enrilo Technologies team will get
-          back to you soon.
+          Your message is with us. Someone from the Enrilo Technologies team
+          will get back to you shortly.
         </p>
       </div>
     );
