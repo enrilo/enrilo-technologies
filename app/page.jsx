@@ -350,9 +350,14 @@ export default function Home() {
 
                 <div className="p-6 sm:p-10">
                 <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
-                  <span className="text-[1.5rem] font-serif font-semibold text-ink">
-                    AcadTracker
-                  </span>
+                  <div>
+                    <span className="text-[1.5rem] font-serif font-semibold text-ink">
+                      AcadTracker
+                    </span>
+                    <span className="ml-2 text-[0.95rem] text-slatesoft">
+                      a product by Enrilo Technologies
+                    </span>
+                  </div>
                   <span className="rounded-full border border-brass bg-brass/10 px-3 py-1 text-[0.9rem] text-brassdark">
                     Live
                   </span>
@@ -368,7 +373,12 @@ export default function Home() {
                   Learn more at{" "}
                   <a href="https://acadtracker.com" target="_blank" rel="noopener noreferrer" className="font-medium text-brassdark underline underline-offset-2">
                     acadtracker.com
+                  </a>{" "}
+                  or follow AcadTracker on{" "}
+                  <a href="https://www.linkedin.com/showcase/acad-tracker" target="_blank" rel="noopener noreferrer" className="font-medium text-brassdark underline underline-offset-2">
+                    LinkedIn
                   </a>
+                  .
                 </p>
                 <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
                   <div className="rounded-2xl bg-paper2 p-5">
@@ -434,11 +444,11 @@ export default function Home() {
               </h4>
               <p className="mb-1.5 text-[1.09rem] text-slate">India</p>
               <h4 className="mb-3 mt-6 font-serif font-semibold text-[1.13rem] text-ink">
-                Connect With Us
+                Enrilo Technologies
               </h4>
               <p className="mb-1.5 text-[1.09rem] text-slate">
                 <a href="https://www.linkedin.com/company/enrilo-technologies" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
-                  Enrilo Technologies on LinkedIn
+                  Company page on LinkedIn
                 </a>
               </p>
               <p className="mb-1.5 text-[1.09rem] text-slate">
@@ -449,6 +459,19 @@ export default function Home() {
               <p className="mb-1.5 text-[1.09rem] text-slate">
                 <a href="https://www.linkedin.com/in/shoaib98/" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
                   Shoaib Shaikh on LinkedIn
+                </a>
+              </p>
+              <h4 className="mb-3 mt-6 font-serif font-semibold text-[1.13rem] text-ink">
+                AcadTracker, our product
+              </h4>
+              <p className="mb-1.5 text-[1.09rem] text-slate">
+                <a href="https://acadtracker.com" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
+                  acadtracker.com
+                </a>
+              </p>
+              <p className="mb-1.5 text-[1.09rem] text-slate">
+                <a href="https://www.linkedin.com/showcase/acad-tracker" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
+                  Showcase page on LinkedIn
                 </a>
               </p>
             </div>

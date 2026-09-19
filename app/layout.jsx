@@ -142,6 +142,7 @@ const organizationJsonLd = {
         url: "https://acadtracker.com",
         description:
           "CRM platform for study abroad and domestic college-placement consultancies to manage leads, students, applications, employees, payments, and documents.",
+        sameAs: ["https://www.linkedin.com/showcase/acad-tracker"],
         audience: {
           "@type": "Audience",
           audienceType:
