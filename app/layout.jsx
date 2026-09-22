@@ -94,11 +94,11 @@ const organizationJsonLd = {
           name: "Aunsh Patel",
           sameAs: ["https://www.linkedin.com/in/aunsh-patel/"],
         },
-        {
+        /* {
           "@type": "Person",
           name: "Shoaib Shaikh",
           sameAs: ["https://www.linkedin.com/in/shoaib98/"],
-        },
+        }, */
       ],
       description: "Enrilo Technologies is a software company building its own products and custom web and mobile applications.",
       areaServed: [
