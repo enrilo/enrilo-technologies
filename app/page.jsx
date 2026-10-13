@@ -430,26 +430,9 @@ export default function Home() {
               <ContactForm />
             </div>
             <div className="rounded-3xl bg-paper2 p-6 sm:p-8">
-              <h4 className="mb-3 font-serif font-semibold text-[1.13rem] text-ink">Direct</h4>
+              <h4 className="font-serif font-semibold text-[1.13rem] text-ink">Direct</h4>
               <p className="mb-1.5 text-[1.09rem] text-slate">
                 contactus@enrilotechnologies.com
-              </p>
-              <p className="mb-1.5 text-[1.09rem] text-slate">
-                Mon–Fri, 10am–6pm IST
-                <br />
-                Sat, 10am-4pm IST
-              </p>
-              <h4 className="mb-3 mt-6 font-serif font-semibold text-[1.13rem] text-ink">
-                Based in
-              </h4>
-              <p className="mb-1.5 text-[1.09rem] text-slate">India</p>
-              <h4 className="mb-3 mt-6 font-serif font-semibold text-[1.13rem] text-ink">
-                Enrilo Technologies
-              </h4>
-              <p className="mb-1.5 text-[1.09rem] text-slate">
-                <a href="https://www.linkedin.com/company/enrilo-technologies" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
-                  Company page on LinkedIn
-                </a>
               </p>
               <p className="mb-1.5 text-[1.09rem] text-slate">
                 <a href="https://www.linkedin.com/in/aunsh-patel/" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
@@ -461,7 +444,24 @@ export default function Home() {
                   Shoaib Shaikh on LinkedIn
                 </a>
               </p> */}
-              <h4 className="mb-3 mt-6 font-serif font-semibold text-[1.13rem] text-ink">
+              <p className="mb-7 text-[1.09rem] text-slate">
+                Mon–Fri, 10am–6pm IST
+                <br />
+                Sat, 10am-4pm IST
+              </p>
+              <h4 className="font-serif font-semibold text-[1.13rem] text-ink">
+                Based in
+              </h4>
+              <p className="mb-7 text-[1.09rem] text-slate">India</p>
+              <h4 className="font-serif font-semibold text-[1.13rem] text-ink">
+                Enrilo Technologies
+              </h4>
+              <p className="mb-7 text-[1.09rem] text-slate">
+                <a href="https://www.linkedin.com/company/enrilo-technologies" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
+                  Company page on LinkedIn
+                </a>
+              </p>
+              <h4 className="font-serif font-semibold text-[1.13rem] text-ink">
                 AcadTracker, our product
               </h4>
               <p className="mb-1.5 text-[1.09rem] text-slate">
