@@ -4,8 +4,7 @@ import CookieConsent from "@/components/CookieConsent";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.enrilotechnologies.com";
+const siteUrl = "https://www.enrilotechnologies.com";
 
 export const viewport = {
   width: "device-width",
@@ -51,15 +50,8 @@ export const metadata = {
     title:
       "Enrilo Technologies | Software products and custom web & mobile apps",
     description:
-      "A software company building its own products and custom web and mobile applications — including AcadTracker, a CRM for education consultancies.",
+      "A software company building its own products and custom web and mobile applications, including AcadTracker, a CRM for education consultancies.",
     locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "Enrilo Technologies | Software products and custom web & mobile apps",
-    description:
-      "A software company building its own products and custom web and mobile applications — including AcadTracker, a CRM for education consultancies.",
   },
   robots: {
     index: true,
@@ -91,7 +83,6 @@ const organizationJsonLd = {
       url: siteUrl,
       logo: `${siteUrl}/icon-512.png`,
       email: "contactus@enrilotechnologies.com",
-      // TODO: replace with the real LinkedIn URL.
       sameAs: [
         "https://www.linkedin.com/company/enrilo-technologies",
       ],

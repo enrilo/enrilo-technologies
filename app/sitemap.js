@@ -1,5 +1,4 @@
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.enrilotechnologies.com";
+const siteUrl = "https://www.enrilotechnologies.com";
 
 export default function sitemap() {
   const routes = ["", "/privacy", "/terms"];
