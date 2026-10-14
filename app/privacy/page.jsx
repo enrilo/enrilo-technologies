@@ -25,7 +25,7 @@ export default function PrivacyPage() {
       </p>
       <p className="mt-4 text-[1.08rem] text-ink2">
         Our product, AcadTracker, has its own Privacy Policy published on the
-        AcadTracker website. That policy — not this one — governs the data
+        AcadTracker website. That policy, not this one, governs the data
         processed within the AcadTracker application, including the lead,
         student, and employee records that customer consultancies manage in
         the product.
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
         </li>
         <li>
           <strong>Usage and device data.</strong> Collected through Google
-          Analytics and our hosting infrastructure — pages visited, referring
+          Analytics and our hosting infrastructure: pages visited, referring
           site, approximate location (derived from IP, which is truncated),
           browser and device type, and timestamps.
         </li>
@@ -110,10 +110,10 @@ export default function PrivacyPage() {
       </p>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-[1.08rem] text-ink2">
         <li>
-          <strong>Service providers</strong> that help us run this site — such
-          as hosting, infrastructure, analytics, and email delivery providers —
-          under contracts that limit them to processing data on our
-          instructions
+          <strong>Service providers</strong> that help us run this site,
+          including hosting, infrastructure, analytics, and email delivery
+          providers, under contracts that limit them to processing data on
+          our instructions
         </li>
         <li>
           <strong>Professional advisers</strong> such as auditors and lawyers,

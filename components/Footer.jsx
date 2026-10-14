@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import CookiePreferencesButton from "@/components/CookiePreferencesButton";
 
-// TODO: replace with the real company LinkedIn URL.
 const COMPANY_LINKEDIN_URL = "https://www.linkedin.com/company/enrilo-technologies";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="rounded-t-3xl bg-ink text-paper">
       <div className="mx-auto flex max-w-shell flex-col flex-wrap items-center justify-between gap-5 px-5 py-10 text-[0.98rem] sm:flex-row sm:px-8 sm:py-9">
         <div className="flex items-center gap-3 opacity-75">
-          <img src="/enrilo-icon-transparent.svg" alt="Enrilo Technologies" className="h-6 w-6 object-contain" />
+          <Image src="/enrilo-icon-transparent.svg" alt="Enrilo Technologies" width={24} height={24} className="h-6 w-6 object-contain" />
           <span>
             © {new Date().getFullYear()} Enrilo Technologies LLP. All rights
             reserved.
@@ -26,11 +26,11 @@ export default function Footer() {
               Terms of Service
             </Link>
           </li>
-          <li>
+          {/* <li>
             <a href={COMPANY_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-paper no-underline hover:text-brass">
               LinkedIn
             </a>
-          </li>
+          </li> */}
           <li>
             <CookiePreferencesButton />
           </li>

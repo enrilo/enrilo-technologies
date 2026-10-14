@@ -44,7 +44,7 @@ export default function TermsPage() {
         provide it. Use of AcadTracker is governed by AcadTracker&rsquo;s own
         Terms of Service and Terms and Conditions, which are published
         separately on the AcadTracker website, together with any order form or
-        subscription agreement entered into at signup. Those documents — NOT THESE TERMS — apply to the AcadTracker product.
+        subscription agreement entered into at signup. Those documents, not these Terms, apply to the AcadTracker product.
       </p>
 
       <h2 className="mb-3 mt-10 font-sans text-[1.4rem] font-semibold">

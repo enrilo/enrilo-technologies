@@ -47,8 +47,8 @@ export default function Home() {
               We build our own software products alongside custom web and
               mobile applications for businesses whose day-to-day work does
               not fit neatly into off-the-shelf tools. AcadTracker, our CRM
-              for education consultancies, is where our story began — it is
-              not where it ends.
+              for education consultancies, is where our story began, not
+              where it ends.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <a href="#services" className="inline-flex items-center gap-2 rounded-full bg-brass px-6 py-3.5 text-[1.09rem] font-semibold text-ink no-underline shadow-lg shadow-brass/20 transition-colors hover:bg-[#c79549]">
@@ -127,7 +127,7 @@ export default function Home() {
                 business on spreadsheets and tools that were never built
                 for how they actually work. Shaping the software around the
                 business, rather than forcing the business to adapt, is
-                still how we approach every project — whether it is our own
+                still how we approach every project, whether it is our own
                 product or something custom for you.
               </p>
               <p className="mt-4 max-w-[58ch] text-[1.18rem] text-ink2">
@@ -144,7 +144,7 @@ export default function Home() {
                   </dt>
                   <dd className="mt-1.5 text-[1.06rem] text-slate">
                     Software shaped to how your team already operates, not
-                    a template you're expected to adapt to.
+                    a template you&apos;re expected to adapt to.
                   </dd>
                 </div>
                 <div className="rounded-2xl border border-ink/10 bg-white p-5 shadow-sm">
@@ -190,7 +190,7 @@ export default function Home() {
                 <p className="mt-3 max-w-[68ch] text-[1.13rem] text-ink2">
                   We build and run our own products, so we hit every
                   rough edge ourselves long before a client ever would.
-                  AcadTracker is the first — a CRM for study-abroad and
+                  AcadTracker is the first: a CRM for study-abroad and
                   domestic education consultancies that covers everything
                   from the first enquiry to a confirmed admission. It is
                   a business we operate day to day, not a side project,
@@ -243,8 +243,8 @@ export default function Home() {
                 <p className="mt-3 max-w-[68ch] text-[1.13rem] text-ink2">
                   For teams and customers who need it in their pocket, we
                   build Android and iOS apps that feel genuinely native
-                  rather than a website wrapped in an app shell — for
-                  field teams working away from a desk, and for
+                  rather than a website wrapped in an app shell, for
+                  field teams working away from a desk and for
                   customer-facing apps people open every day.
                 </p>
                 <ul className="m-0 mt-4 grid grid-cols-1 gap-x-8 gap-y-2 list-disc pl-5 text-[1.08rem] text-ink2 sm:grid-cols-2">
@@ -264,9 +264,9 @@ export default function Home() {
                 </h3>
                 <p className="mt-3 max-w-[68ch] text-[1.13rem] text-ink2">
                   Launch is where the relationship starts, not where it
-                  ends. We keep maintaining and improving what we build —
+                  ends. We keep maintaining and improving what we build:
                   fixing issues, shipping small improvements, and adjusting
-                  as your business changes — with a direct line to the
+                  as your business changes, with a direct line to the
                   person who actually knows your project, instead of a
                   ticket queue.
                 </p>
@@ -296,7 +296,7 @@ export default function Home() {
                 {
                   n: "01",
                   t: "Understand the work",
-                  d: "We sit down with your team and map how work actually moves today — the steps, the people involved, and where time gets lost along the way.",
+                  d: "We sit down with your team and map how work actually moves today: the steps, the people involved, and where time gets lost along the way.",
                 },
                 {
                   n: "02",
@@ -311,7 +311,7 @@ export default function Home() {
                 {
                   n: "04",
                   t: "Support for the long run",
-                  d: "Ongoing maintenance and improvements, with a direct line to the people who actually built it — never a ticket lottery.",
+                  d: "Ongoing maintenance and improvements, with a direct line to the people who actually built it, never a ticket lottery.",
                 },
               ].map((s) => (
                 <li key={s.n} className="grid grid-cols-[3rem_1fr] gap-5 rounded-2xl border border-ink/10 bg-white p-5 shadow-sm sm:p-6">
@@ -345,7 +345,7 @@ export default function Home() {
           <div>
             <div className="mx-auto max-w-2xl overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-xl shadow-ink/10">
                 <a href="https://acadtracker.com" target="_blank" rel="noopener noreferrer" className="block bg-ink">
-                  <Image src={acadtrackerLogo} alt="AcadTracker — empowering consultancies, simplifying admissions" priority={false} sizes="(max-width: 768px) 100vw, 700px" className="h-auto w-full object-contain" />
+                  <Image src={acadtrackerLogo} alt="AcadTracker: empowering consultancies, simplifying admissions" priority={false} sizes="(max-width: 768px) 100vw, 700px" className="h-auto w-full object-contain" />
                 </a>
 
                 <div className="p-6 sm:p-10">
@@ -422,7 +422,7 @@ export default function Home() {
           <div className="mb-14 flex flex-col gap-4">
             <Eyebrow>Contact Us</Eyebrow>
             <h2 className="max-w-[22ch] text-[clamp(1.85rem,3.2vw,2.55rem)] text-ink">
-              Let's talk about AcadTracker or a project of your own.
+              Let&apos;s talk about AcadTracker or a project of your own.
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_320px]">
