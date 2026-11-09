@@ -445,9 +445,9 @@ export default function Home() {
                 </a>
               </p> */}
               <p className="mb-7 text-[1.09rem] text-slate">
-                Mon–Fri, 10am–6pm IST
+                Mon to Fri, 10 AM to 6 PM IST
                 <br />
-                Sat, 10am-4pm IST
+                Sat, 10 AM to 4 PM IST
               </p>
               <h4 className="font-serif font-semibold text-[1.13rem] text-ink">
                 Based in
