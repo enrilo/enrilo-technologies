@@ -406,8 +406,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-8 flex flex-wrap gap-3.5">
-                  <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-ink2 text-white px-6 py-3.5 text-[1.09rem] font-semibold no-underline shadow-lg shadow-ink/20 transition-colors hover:bg-ink">
-                    Request A Walkthrough
+                  <a href="https://calendly.com/contactus-enrilotechnologies/30min" target="_blank" className="inline-flex items-center gap-2 rounded-full bg-ink2 text-white px-6 py-3.5 text-[1.09rem] font-semibold no-underline shadow-lg shadow-ink/20 transition-colors hover:bg-ink">
+                    Book A Walkthrough
                   </a>
                 </div>
                 </div>
