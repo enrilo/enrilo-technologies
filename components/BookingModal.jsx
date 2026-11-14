@@ -11,7 +11,7 @@ import {
   todayKeyIST,
 } from "@/lib/bookingConfig";
 
-const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const fieldSx = {
@@ -27,7 +27,7 @@ function localTimeHint(ms) {
 }
 
 function monthMatrix(y, m) {
-  const firstDow = (new Date(Date.UTC(y, m - 1, 1)).getUTCDay() + 6) % 7; // Monday = 0
+  const firstDow = new Date(Date.UTC(y, m - 1, 1)).getUTCDay(); // Sunday = 0
   const daysInMonth = new Date(Date.UTC(y, m, 0)).getUTCDate();
   const cells = Array(firstDow).fill(null);
   for (let d = 1; d <= daysInMonth; d++) cells.push(d);
