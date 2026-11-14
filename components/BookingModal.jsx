@@ -10,6 +10,7 @@ import {
   toDateKey,
   todayKeyIST,
 } from "@/lib/bookingConfig";
+import { LIMITS, normalizeBookingFields, validateBookingFields } from "@/lib/bookingValidation";
 
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -85,6 +86,8 @@ export default function BookingModal({ open, onClose }) {
   const [form, setForm] = useState({ name: "", email: "", message: "", website: "" });
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [touched, setTouched] = useState({});
+  const [serverFieldErrors, setServerFieldErrors] = useState({});
   const [result, setResult] = useState(null);
   const slotCache = useRef(new Map());
 
@@ -142,15 +145,26 @@ export default function BookingModal({ open, onClose }) {
     setSlotNotice("");
   };
 
+  const fieldErrors = { ...validateBookingFields(form), ...serverFieldErrors };
+  const showError = (field) => (touched[field] && fieldErrors[field]) || "";
+
+  const updateField = (field) => (e) => {
+    setForm({ ...form, [field]: e.target.value });
+    if (serverFieldErrors[field]) setServerFieldErrors(({ [field]: _, ...rest }) => rest);
+  };
+  const touch = (field) => () => setTouched((t) => ({ ...t, [field]: true }));
+
   const submit = async (e) => {
     e.preventDefault();
+    setTouched({ name: true, email: true, message: true });
+    if (["name", "email", "message"].some((f) => fieldErrors[f])) return;
     setSubmitting(true);
     setSubmitError("");
     try {
       const res = await fetch("/api/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ start: selectedStart, ...form }),
+        body: JSON.stringify({ start: selectedStart, ...normalizeBookingFields(form), website: form.website }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
@@ -162,6 +176,10 @@ export default function BookingModal({ open, onClose }) {
           setStep("pick");
           setSlotNotice(data.error || "That time is no longer available. Please pick another slot.");
           return;
+        }
+        if (data.fields) {
+          const { start: _start, ...rest } = data.fields;
+          setServerFieldErrors(rest);
         }
         throw new Error(data.error || "Something went wrong. Please try again.");
       }
@@ -315,17 +333,22 @@ export default function BookingModal({ open, onClose }) {
 
   // ---------- Step 2: details form ----------
   const details = (
-    <form onSubmit={submit} className="flex-1 p-6 md:p-8">
+    <form onSubmit={submit} noValidate className="flex-1 p-6 md:p-8">
       <h3 className="mb-5 font-sans text-[1.2rem] font-semibold text-ink">Enter details</h3>
       <TextField label="Full Name" required fullWidth sx={fieldSx} value={form.name} autoComplete="name"
-        slotProps={{ htmlInput: { maxLength: 100 } }} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+        error={Boolean(showError("name"))} helperText={showError("name") || " "}
+        slotProps={{ htmlInput: { maxLength: LIMITS.name[1] } }} onChange={updateField("name")} onBlur={touch("name")} />
       <TextField label="Email ID" type="email" required fullWidth sx={fieldSx} value={form.email} autoComplete="email"
-        helperText="We'll send the meeting invite and join link here." slotProps={{ htmlInput: { maxLength: 200 } }}
-        onChange={(e) => setForm({ ...form, email: e.target.value })} />
+        error={Boolean(showError("email"))}
+        helperText={showError("email") || "We'll send the meeting invite and join link here."}
+        slotProps={{ htmlInput: { maxLength: LIMITS.email[1], inputMode: "email" } }}
+        onChange={updateField("email")} onBlur={touch("email")} />
       <TextField label="What should we prepare for this call?" required fullWidth multiline minRows={4} sx={fieldSx}
-        value={form.message} slotProps={{ htmlInput: { maxLength: 2000 } }}
+        value={form.message} error={Boolean(showError("message"))}
+        helperText={showError("message") || `${form.message.trim().length}/${LIMITS.message[1]}`}
+        slotProps={{ htmlInput: { maxLength: LIMITS.message[1] } }}
         placeholder="e.g. team size, number of branches, what you use today, features you're most interested in"
-        onChange={(e) => setForm({ ...form, message: e.target.value })} />
+        onChange={updateField("message")} onBlur={touch("message")} />
       {/* Honeypot for bots — hidden from people and screen readers */}
       <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden"
         value={form.website} onChange={(e) => setForm({ ...form, website: e.target.value })} />

@@ -3,10 +3,9 @@ import { BOOKING, humanSlotLabel, isValidSlotStart, zohoStartTime } from "@/lib/
 import { getBusyRanges, invalidateBusyCache, overlapsBusy } from "@/lib/bookingAvailability";
 import { createMeeting, isZohoConfigured } from "@/lib/zohoMeeting";
 import { isMailerConfigured, sendBookingEmails } from "@/lib/mailer";
+import { normalizeBookingFields, validateBookingFields } from "@/lib/bookingValidation";
 
 export const dynamic = "force-dynamic";
-
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // POST /api/booking  { start, name, email, message, website (honeypot) }
 export async function POST(request) {
@@ -21,14 +20,9 @@ export async function POST(request) {
   if (body.website) return NextResponse.json({ ok: true });
 
   const start = Number(body.start);
-  const name = String(body.name || "").trim();
-  const email = String(body.email || "").trim().toLowerCase();
-  const message = String(body.message || "").trim();
+  const { name, email, message } = normalizeBookingFields(body);
 
-  const errors = {};
-  if (name.length < 2 || name.length > 100) errors.name = "Please enter your full name.";
-  if (!EMAIL_RE.test(email) || email.length > 200) errors.email = "Please enter a valid email address.";
-  if (message.length < 5 || message.length > 2000) errors.message = "Please tell us a little about what you'd like to see (5–2000 characters).";
+  const errors = validateBookingFields(body);
   if (!isValidSlotStart(start)) errors.start = "That time is no longer available. Please pick another slot.";
   if (Object.keys(errors).length) {
     return NextResponse.json({ error: Object.values(errors)[0], fields: errors }, { status: 400 });
