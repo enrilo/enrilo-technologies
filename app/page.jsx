@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroSchematic from "@/components/HeroSchematic";
 import ContactForm from "@/components/ContactForm";
+import BookWalkthroughButton from "@/components/BookWalkthroughButton";
 import acadtrackerLogo from "./assets/images/acadtracker/with-tagline/acadtrack-with-tagline-1920x1080.png";
 
 export const metadata = {
@@ -406,9 +407,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-8 flex flex-wrap gap-3.5">
-                  <a href="https://calendly.com/contactus-enrilotechnologies/30min" target="_blank" className="inline-flex items-center gap-2 rounded-full bg-ink2 text-white px-6 py-3.5 text-[1.09rem] font-semibold no-underline shadow-lg shadow-ink/20 transition-colors hover:bg-ink">
-                    Book A Walkthrough
-                  </a>
+                  <BookWalkthroughButton className="inline-flex items-center gap-2 rounded-full bg-ink2 text-white px-6 py-3.5 text-[1.09rem] font-semibold no-underline shadow-lg shadow-ink/20 transition-colors hover:bg-ink" />
                 </div>
                 </div>
             </div>
@@ -458,7 +457,7 @@ export default function Home() {
               </h4>
               <p className="mb-7 text-[1.09rem] text-slate">
                 <a href="https://www.linkedin.com/company/enrilo-technologies" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
-                  Company page on LinkedIn
+                  LinkedIn Page
                 </a>
               </p>
               <h4 className="font-serif font-semibold text-[1.13rem] text-ink">
@@ -471,7 +470,7 @@ export default function Home() {
               </p>
               <p className="mb-1.5 text-[1.09rem] text-slate">
                 <a href="https://www.linkedin.com/showcase/acad-tracker" target="_blank" rel="noopener noreferrer" className="text-brassdark underline underline-offset-2">
-                  Showcase page on LinkedIn
+                  LinkedIn Page
                 </a>
               </p>
             </div>
