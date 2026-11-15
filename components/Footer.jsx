@@ -11,7 +11,9 @@ export default function Footer() {
         <div className="flex items-center gap-3 opacity-75">
           <Image src="/enrilo-icon-transparent.svg" alt="Enrilo Technologies" width={24} height={24} className="h-6 w-6 object-contain" />
           <span>
-            © {new Date().getFullYear()} Enrilo Technologies LLP. All rights
+            {/* © {new Date().getFullYear()} Enrilo Technologies LLP. All rights
+            reserved. */}
+            © {new Date().getFullYear()} Enrilo Technologies. All rights
             reserved.
           </span>
         </div>
