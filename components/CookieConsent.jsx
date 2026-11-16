@@ -3,28 +3,26 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const STORAGE_KEY = "tc-cookie-consent";
+/** localStorage key holding the visitor's choice: "granted" or "denied". */
+export const CONSENT_STORAGE_KEY = "tc-cookie-consent";
+const STORAGE_KEY = CONSENT_STORAGE_KEY;
 
 /** Event other components dispatch to reopen the banner. */
 export const OPEN_CONSENT_EVENT = "tc-open-cookie-consent";
 
+/** Event fired on window when the visitor makes a choice; detail: { granted }. */
+export const CONSENT_CHANGE_EVENT = "tc-cookie-consent-change";
+
 /**
- * Cookie consent banner wired to Google Consent Mode v2.
+ * Cookie consent banner.
  *
- * On first visit, analytics storage is denied by default (see GoogleAnalytics).
- * The banner lets the visitor accept or decline; the choice is saved in
- * localStorage and replayed to gtag on every subsequent load, so the banner
- * only appears once.
+ * Nothing that tracks visitors loads until they accept: GtmLoader reads the
+ * saved choice on load and listens for CONSENT_CHANGE_EVENT, so accepting
+ * mid-session loads Google Tag Manager straight away. The choice is saved in
+ * localStorage, so the banner only appears once.
  */
 function updateConsent(granted) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
-  const value = granted ? "granted" : "denied";
-  window.gtag("consent", "update", {
-    ad_storage: value,
-    ad_user_data: value,
-    ad_personalization: value,
-    analytics_storage: value,
-  });
+  window.dispatchEvent(new CustomEvent(CONSENT_CHANGE_EVENT, { detail: { granted } }));
 }
 
 export default function CookieConsent() {
@@ -38,11 +36,7 @@ export default function CookieConsent() {
       // localStorage unavailable — show the banner
     }
 
-    if (saved === "granted") {
-      updateConsent(true);
-    } else if (saved === "denied") {
-      updateConsent(false);
-    } else {
+    if (saved !== "granted" && saved !== "denied") {
       // eslint-disable-next-line react-hooks/set-state-in-effect -- the choice lives in localStorage, which is only readable after mount
       setVisible(true);
     }

@@ -11,6 +11,7 @@ import {
   todayKeyIST,
 } from "@/lib/bookingConfig";
 import { LIMITS, normalizeBookingFields, validateBookingFields } from "@/lib/bookingValidation";
+import { trackEvent } from "@/lib/analytics";
 
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -185,6 +186,7 @@ export default function BookingModal({ open, onClose }) {
       }
       setResult(data);
       setStep("done");
+      trackEvent("generate_lead", { form_name: "walkthrough_booking" });
     } catch (err) {
       setSubmitError(err.message);
     } finally {

@@ -25,10 +25,12 @@ npm run dev
   social channel linked is LinkedIn (company page, product showcase page,
   and founder profiles) — there is no Twitter/X presence, so no Twitter
   card metadata is emitted
-- **Google Analytics 4:** `components/GoogleAnalytics.jsx` loads gtag.js
-  site-wide, driven entirely by `NEXT_PUBLIC_GA_MEASUREMENT_ID` — set it in
-  `.env.local` (never hardcode the ID in code), gated by the
-  `CookieConsent` banner via Google Consent Mode v2
+- **Google Tag Manager:** `components/GtmLoader.jsx` loads GTM (via
+  `@next/third-parties`) from `NEXT_PUBLIC_GTM_ID`, only in production
+  builds and only after the visitor accepts the `CookieConsent` banner. GA4
+  is configured inside the GTM container, not in code. Custom events go
+  through `trackEvent()` in `lib/analytics.js` — never push to
+  `window.dataLayer` directly
 - **`sitemap.xml` and `robots.txt`:** generated dynamically from the
   hardcoded `siteUrl` in `app/sitemap.js` and `app/robots.js`
 - **Design:** a "drafting studio" visual identity (ink navy + brass on cool

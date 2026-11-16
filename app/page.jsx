@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeroSchematic from "@/components/HeroSchematic";
 import ContactForm from "@/components/ContactForm";
 import BookWalkthroughButton from "@/components/BookWalkthroughButton";
+import TrackedLink from "@/components/TrackedLink";
 import acadtrackerLogo from "./assets/images/acadtracker/with-tagline/acadtrack-with-tagline-1920x1080.png";
 
 export const metadata = {
@@ -55,9 +56,9 @@ export default function Home() {
               <a href="#services" className="inline-flex items-center gap-2 rounded-full bg-brass px-6 py-3.5 text-[1.09rem] font-semibold text-ink no-underline shadow-lg shadow-brass/20 transition-colors hover:bg-[#c79549]">
                 What We Do
               </a>
-              <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-paper/25 px-6 py-3.5 text-[1.09rem] font-semibold text-paper no-underline transition-colors hover:border-paper hover:bg-paper/5">
+              <TrackedLink event="contact_click" eventParams={{ location: "hero" }} href="#contact" className="inline-flex items-center gap-2 rounded-full border border-paper/25 px-6 py-3.5 text-[1.09rem] font-semibold text-paper no-underline transition-colors hover:border-paper hover:bg-paper/5">
                 Get in touch
-              </a>
+              </TrackedLink>
             </div>
             <dl className="mt-11 grid max-w-[48ch] grid-cols-2 gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-paper/10 bg-paper/5 px-4 py-3.5">
@@ -229,9 +230,9 @@ export default function Home() {
                   <li>Booking and workflow systems</li>
                   <li>Company and product websites</li>
                 </ul>
-                <a href="#contact" className="mt-5 inline-flex items-center gap-2 text-[1.12rem] font-medium text-brassdark no-underline hover:underline">
+                <TrackedLink event="contact_click" eventParams={{ location: "services" }} href="#contact" className="mt-5 inline-flex items-center gap-2 text-[1.12rem] font-medium text-brassdark no-underline hover:underline">
                   Tell us what you need →
-                </a>
+                </TrackedLink>
               </div>
 
               <div className="rounded-3xl border border-ink/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md sm:p-8">

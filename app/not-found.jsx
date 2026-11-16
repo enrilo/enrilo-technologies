@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata = {
   title: "Page Not Found",
@@ -33,9 +34,9 @@ export default function NotFound() {
           <Link href="/" className="inline-flex items-center gap-2 rounded-full bg-brass px-6 py-3.5 text-[1.09rem] font-semibold text-ink no-underline shadow-lg shadow-brass/20 transition-colors hover:bg-[#c79549]">
             Back to Home
           </Link>
-          <Link href="/#contact" className="inline-flex items-center gap-2 rounded-full border border-paper/25 px-6 py-3.5 text-[1.09rem] font-semibold text-paper no-underline transition-colors hover:border-paper hover:bg-paper/5">
+          <TrackedLink next event="contact_click" eventParams={{ location: "not_found" }} href="/#contact" className="inline-flex items-center gap-2 rounded-full border border-paper/25 px-6 py-3.5 text-[1.09rem] font-semibold text-paper no-underline transition-colors hover:border-paper hover:bg-paper/5">
             Contact Us
-          </Link>
+          </TrackedLink>
         </div>
       </div>
     </section>

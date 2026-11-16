@@ -1,10 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useForm } from "@formspree/react";
 import { TextField } from "@mui/material";
 import Select from "react-select";
 import { countryCodes } from "@/components/CountryCodeList";
+import { trackEvent } from "@/lib/analytics";
 
 // Replace with your own Formspree form ID (https://formspree.io → your form → endpoint).
 const FORMSPREE_FORM_ID = "mredebve";
@@ -17,6 +18,10 @@ const fieldSx = {
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
+
+  useEffect(() => {
+    if (state.succeeded) trackEvent("generate_lead", { form_name: "contact_form" });
+  }, [state.succeeded]);
 
   const [countryCode, setCountryCode] = useState(null);
   const [phone, setPhone] = useState("");

@@ -89,12 +89,13 @@ export default function PrivacyPage() {
         Cookies and analytics
       </h2>
       <p className="text-[1.08rem] text-ink2">
-        We use Google Analytics to understand how visitors use this site. When
-        you first visit, a consent banner asks whether you accept analytics
-        cookies. Until you accept, Google Analytics runs in a restricted mode
-        that sets no cookies and does not identify you. If you accept, Google
-        Analytics sets cookies and collects usage data; if you decline, it
-        stays in the restricted, cookie-free mode. You can change your choice
+        We use Google Analytics, loaded through Google Tag Manager, to
+        understand how visitors use this site. When you first visit, a consent
+        banner asks whether you accept analytics cookies. Until you accept,
+        neither Google Tag Manager nor Google Analytics is loaded, so no
+        analytics cookies are set and no usage data is sent. If you accept,
+        Google Analytics sets cookies and collects usage data; if you decline,
+        nothing is loaded. You can change your choice
         any time with the &ldquo;Cookie Preferences&rdquo; link in the footer,
         or opt out using your browser settings or the Google Analytics opt-out
         browser add-on. We do not use advertising or cross-site tracking
